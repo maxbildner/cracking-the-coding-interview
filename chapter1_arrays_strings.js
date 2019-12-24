@@ -116,6 +116,7 @@ function checkPermutation(str1, str2) {
 
 // V3- Sort both inputs first, then compare values
 // Note* assumes inputs all lowercase/no spaces/non alphabetic chars
+// Time: O(N logN)
 /*
 function checkPermutation(str1, str2) {
   if (str1.length != str2.length) return false;
@@ -153,6 +154,12 @@ function quickSort(str) {
 }
 // console.log(quickSort("ecbad"));
 */
+
+
+// V4- same as V3, just shorter
+// function checkPermutation(str1, str2) {
+//   return str1.split("").sort().join("") == str2.split("").sort().join("");
+// }
 
 // console.log(checkPermutation("ab", "ba"));      // true
 // console.log(checkPermutation("abc", "cba"));    // true
