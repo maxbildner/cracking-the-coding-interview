@@ -215,6 +215,7 @@ function quickSort(str) {
 // 2 c's  even
 // 1 o    AT MOST 1 odd character count 
 // ex. 'tact coa'     => true
+/*
 function palindromePermutation(string) {
   // get rid of all white spaces, and make string lowercase
   let newStr = string.split(" ").join("").toLowerCase();
@@ -249,3 +250,38 @@ console.log(palindromePermutation('tact coa'));     // true
 console.log(palindromePermutation('tact ca'));      // true   
 console.log(palindromePermutation('act coa'));      // false
 console.log(palindromePermutation('tact coooa'));   // true    taoooat
+*/
+
+
+
+
+
+// *****************************************************************************
+// 1.5 One Way
+// There are three types of edits that can be performed on strings:
+// 1 insert a character, 2 remove a char, or 3 replace a char
+// Given two strings, write a function to check if they are
+// one edit (or zero edits) away.
+// ex.
+// "pale", "ple"    => true
+// "pales", "pale"  => true
+// "pale", "bale"   => true
+// "pale", "bake"   => false
+
+function oneWay(originalStr, modifiedStr) {
+  if (originalStr == modifiedStr) return true;    // 0 edits
+  // if string lengths are not within +/- 1 of each other, return false
+  
+  // check conditions separately?
+  // 1 insertion of only 1 character (or 0)
+  // "pale" 
+  // "pasle"
+}
+
+
+console.log(oneWay("pale", "pale"));    // true
+console.log(oneWay("pale", "ple"));     // true
+console.log(oneWay("pales", "pale"));   // true
+console.log(oneWay("pale", "bale"));    // true
+console.log(oneWay("pale", "bake"));    // false
+console.log(oneWay("pale", "lpae"));    // false
